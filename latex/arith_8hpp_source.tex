@@ -1,0 +1,44 @@
+\doxysection{arith.\+hpp}
+\hypertarget{arith_8hpp_source}{}\label{arith_8hpp_source}\index{include/arith.hpp@{include/arith.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ARITH}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ARITH}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}node.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }ezd\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classezd_1_1Add}{Add}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classezd_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}{Node::Node}};}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Add_a141de162904216fba492e034e279803c}{forward}}();}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Add_a77677db80e646df0534fd356e3ebf9bd}{backward}}(\textcolor{keywordtype}{float}\ seed\ =\ 1);}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classezd_1_1Sub}{Sub}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classezd_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}{Node::Node}};}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Sub_a8583f40a4c3c29361e8615d271ef1bd1}{forward}}();}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Sub_abef2cf3c2dcdc8a2fcc3657b5cbbcade}{backward}}(\textcolor{keywordtype}{float}\ seed\ =\ 1);}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classezd_1_1Mul}{Mul}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classezd_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}{Node::Node}};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Mul_a33806282a7067b37d2714126c1b07712}{forward}}();}
+\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Mul_a31846f4c2bce2463dd98795633261144}{backward}}(\textcolor{keywordtype}{float}\ seed\ =\ 1);}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classezd_1_1Div}{Div}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classezd_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}{Node::Node}};}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Div_a44fe4561ec662c26870c55a15432a587}{forward}}();}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classezd_1_1Div_a0fad338539cd47e7b1cd5ccc2dce9f6e}{backward}}(\textcolor{keywordtype}{float}\ seed\ =\ 1);}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\ \textcolor{comment}{//\ namespace\ ezd}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

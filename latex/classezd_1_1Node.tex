@@ -1,0 +1,244 @@
+\doxysection{ezd\+::Node Class Reference}
+\hypertarget{classezd_1_1Node}{}\label{classezd_1_1Node}\index{ezd::Node@{ezd::Node}}
+
+
+A node in a computation graph.  
+
+
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+Inheritance diagram for ezd\+::Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classezd_1_1Node}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classezd_1_1Node_a0a1768876d73f8987a593d26ddec4b00}{get}} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classezd_1_1Node_a0760b27c45c611aa7f5478a9470fd4ac}{set}} (float \mbox{\hyperlink{classezd_1_1Node_a4433e6f7ae7db52dbddd4970940c1304}{x}})
+\begin{DoxyCompactList}\small\item\em Sets the value of the node. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_afda8e169fb04fef601ed9878a009cfb9}{get\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em Returns the left child of the node. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_addd4f105a972f7a0d6f8793bdc663faa}{get\+\_\+right}} ()
+\begin{DoxyCompactList}\small\item\em Returns the right child of the node. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classezd_1_1Node_adb251eb9fd5c62293684b9e5d4c1c7c6}{get\+\_\+grad}} ()
+\begin{DoxyCompactList}\small\item\em Returns the derivative of the node. \end{DoxyCompactList}\item 
+\Hypertarget{classezd_1_1Node_a70807d276de1a2a1ee97f720ed605238}\label{classezd_1_1Node_a70807d276de1a2a1ee97f720ed605238} 
+void {\bfseries zero\+\_\+grad} ()
+\begin{DoxyCompactList}\small\item\em Clears the derivative of this node and all descendants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classezd_1_1Node_aa04694c70393a58d213f5f76fe8ac7e3}{update}} (bool minimize=true)
+\begin{DoxyCompactList}\small\item\em Updates the value of this node and all descendants via the gradient. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classezd_1_1Node_aac29cfbb8f83880aa7f12e78625f11e5}{forward}} ()
+\begin{DoxyCompactList}\small\item\em Performs a forward pass. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classezd_1_1Node_a76d2d9a3c743926b4aab7e5b3decc9dd}{backward}} (float seed=1)
+\begin{DoxyCompactList}\small\item\em Performs a backward pass. \end{DoxyCompactList}\item 
+\Hypertarget{classezd_1_1Node_a0620b2e701017a3abd5cefd84c7bcf4f}\label{classezd_1_1Node_a0620b2e701017a3abd5cefd84c7bcf4f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Node} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}{Node}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_ae9284c11bae0052d53acb49f2ddc476f}{left}}=nullptr, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_a85f1401fe0a153065c70c879081c989a}{right}}=nullptr, float \mbox{\hyperlink{classezd_1_1Node_a4433e6f7ae7db52dbddd4970940c1304}{x}}=0, float \mbox{\hyperlink{classezd_1_1Node_ade9b9e6ef94d1d23227a3205887baf86}{alpha}}=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{classezd_1_1Node}{Node} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classezd_1_1Node_a4433e6f7ae7db52dbddd4970940c1304}{x}}
+\item 
+float \mbox{\hyperlink{classezd_1_1Node_a6b272d597cc238d69827e5a6b7fa23c6}{grad}}
+\item 
+float \mbox{\hyperlink{classezd_1_1Node_ade9b9e6ef94d1d23227a3205887baf86}{alpha}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_ae9284c11bae0052d53acb49f2ddc476f}{left}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ \mbox{\hyperlink{classezd_1_1Node_a85f1401fe0a153065c70c879081c989a}{right}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node in a computation graph. 
+
+This class is used to represent a step in a computation. Operators on the node type are overloaded to create new nodes, automatically constructing a graph out of arbitrary mathematical expressions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57}\label{classezd_1_1Node_a45438d4e81a9a94fd742bbc2db0e7b57} 
+\index{ezd::Node@{ezd::Node}!Node@{Node}}
+\index{Node@{Node}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily ezd\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$}]{left = {\ttfamily nullptr},  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$}]{right = {\ttfamily nullptr},  }\item[{float}]{x = {\ttfamily 0},  }\item[{float}]{alpha = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{classezd_1_1Node}{Node} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & the left child node. \\
+\hline
+{\em right} & the right child node. \\
+\hline
+{\em x} & the initial node value. \\
+\hline
+{\em alpha} & the node learning rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classezd_1_1Node_a76d2d9a3c743926b4aab7e5b3decc9dd}\label{classezd_1_1Node_a76d2d9a3c743926b4aab7e5b3decc9dd} 
+\index{ezd::Node@{ezd::Node}!backward@{backward}}
+\index{backward@{backward}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily virtual void ezd\+::\+Node\+::backward (\begin{DoxyParamCaption}\item[{float}]{seed = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs a backward pass. 
+
+The backward pass recurses through the computational graph, and each node stores its derivative with respect to the source node after the operation completes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & the derivative seed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classezd_1_1Add_a77677db80e646df0534fd356e3ebf9bd}{ezd\+::\+Add}}, \mbox{\hyperlink{classezd_1_1Sub_abef2cf3c2dcdc8a2fcc3657b5cbbcade}{ezd\+::\+Sub}}, \mbox{\hyperlink{classezd_1_1Mul_a31846f4c2bce2463dd98795633261144}{ezd\+::\+Mul}}, and \mbox{\hyperlink{classezd_1_1Div_a0fad338539cd47e7b1cd5ccc2dce9f6e}{ezd\+::\+Div}}.
+
+\Hypertarget{classezd_1_1Node_aac29cfbb8f83880aa7f12e78625f11e5}\label{classezd_1_1Node_aac29cfbb8f83880aa7f12e78625f11e5} 
+\index{ezd::Node@{ezd::Node}!forward@{forward}}
+\index{forward@{forward}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily virtual void ezd\+::\+Node\+::forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs a forward pass. 
+
+The forward pass recurses through the computational graph, and each node stores its output value after the operation completes. 
+
+Reimplemented in \mbox{\hyperlink{classezd_1_1Add_a141de162904216fba492e034e279803c}{ezd\+::\+Add}}, \mbox{\hyperlink{classezd_1_1Sub_a8583f40a4c3c29361e8615d271ef1bd1}{ezd\+::\+Sub}}, \mbox{\hyperlink{classezd_1_1Mul_a33806282a7067b37d2714126c1b07712}{ezd\+::\+Mul}}, and \mbox{\hyperlink{classezd_1_1Div_a44fe4561ec662c26870c55a15432a587}{ezd\+::\+Div}}.
+
+\Hypertarget{classezd_1_1Node_a0a1768876d73f8987a593d26ddec4b00}\label{classezd_1_1Node_a0a1768876d73f8987a593d26ddec4b00} 
+\index{ezd::Node@{ezd::Node}!get@{get}}
+\index{get@{get}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily float ezd\+::\+Node\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the value of the node. 
+
+\begin{DoxyReturn}{Returns}
+the value as a float. 
+\end{DoxyReturn}
+\Hypertarget{classezd_1_1Node_adb251eb9fd5c62293684b9e5d4c1c7c6}\label{classezd_1_1Node_adb251eb9fd5c62293684b9e5d4c1c7c6} 
+\index{ezd::Node@{ezd::Node}!get\_grad@{get\_grad}}
+\index{get\_grad@{get\_grad}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{get\_grad()}{get\_grad()}}
+{\footnotesize\ttfamily float ezd\+::\+Node\+::get\+\_\+grad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the derivative of the node. 
+
+\begin{DoxyReturn}{Returns}
+the derivative as a float. 
+\end{DoxyReturn}
+\Hypertarget{classezd_1_1Node_afda8e169fb04fef601ed9878a009cfb9}\label{classezd_1_1Node_afda8e169fb04fef601ed9878a009cfb9} 
+\index{ezd::Node@{ezd::Node}!get\_left@{get\_left}}
+\index{get\_left@{get\_left}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{get\_left()}{get\_left()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ ezd\+::\+Node\+::get\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the left child of the node. 
+
+\begin{DoxyReturn}{Returns}
+the left child node. 
+\end{DoxyReturn}
+\Hypertarget{classezd_1_1Node_addd4f105a972f7a0d6f8793bdc663faa}\label{classezd_1_1Node_addd4f105a972f7a0d6f8793bdc663faa} 
+\index{ezd::Node@{ezd::Node}!get\_right@{get\_right}}
+\index{get\_right@{get\_right}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{get\_right()}{get\_right()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classezd_1_1Node}{Node}} $>$ ezd\+::\+Node\+::get\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the right child of the node. 
+
+\begin{DoxyReturn}{Returns}
+the right child node. 
+\end{DoxyReturn}
+\Hypertarget{classezd_1_1Node_a0760b27c45c611aa7f5478a9470fd4ac}\label{classezd_1_1Node_a0760b27c45c611aa7f5478a9470fd4ac} 
+\index{ezd::Node@{ezd::Node}!set@{set}}
+\index{set@{set}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void ezd\+::\+Node\+::set (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Sets the value of the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the desired value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classezd_1_1Node_aa04694c70393a58d213f5f76fe8ac7e3}\label{classezd_1_1Node_aa04694c70393a58d213f5f76fe8ac7e3} 
+\index{ezd::Node@{ezd::Node}!update@{update}}
+\index{update@{update}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void ezd\+::\+Node\+::update (\begin{DoxyParamCaption}\item[{bool}]{minimize = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Updates the value of this node and all descendants via the gradient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minimize} & indicates whether to minimize (true) or maximize (false). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classezd_1_1Node_ade9b9e6ef94d1d23227a3205887baf86}\label{classezd_1_1Node_ade9b9e6ef94d1d23227a3205887baf86} 
+\index{ezd::Node@{ezd::Node}!alpha@{alpha}}
+\index{alpha@{alpha}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily float ezd\+::\+Node\+::alpha\hspace{0.3cm}{\ttfamily [protected]}}
+
+The learning rate of the node. \Hypertarget{classezd_1_1Node_a6b272d597cc238d69827e5a6b7fa23c6}\label{classezd_1_1Node_a6b272d597cc238d69827e5a6b7fa23c6} 
+\index{ezd::Node@{ezd::Node}!grad@{grad}}
+\index{grad@{grad}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{grad}{grad}}
+{\footnotesize\ttfamily float ezd\+::\+Node\+::grad\hspace{0.3cm}{\ttfamily [protected]}}
+
+The derivative of the node. \Hypertarget{classezd_1_1Node_ae9284c11bae0052d53acb49f2ddc476f}\label{classezd_1_1Node_ae9284c11bae0052d53acb49f2ddc476f} 
+\index{ezd::Node@{ezd::Node}!left@{left}}
+\index{left@{left}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classezd_1_1Node}{Node}}$>$ ezd\+::\+Node\+::left\hspace{0.3cm}{\ttfamily [protected]}}
+
+The left child of the node. \Hypertarget{classezd_1_1Node_a85f1401fe0a153065c70c879081c989a}\label{classezd_1_1Node_a85f1401fe0a153065c70c879081c989a} 
+\index{ezd::Node@{ezd::Node}!right@{right}}
+\index{right@{right}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classezd_1_1Node}{Node}}$>$ ezd\+::\+Node\+::right\hspace{0.3cm}{\ttfamily [protected]}}
+
+The right child of the node. \Hypertarget{classezd_1_1Node_a4433e6f7ae7db52dbddd4970940c1304}\label{classezd_1_1Node_a4433e6f7ae7db52dbddd4970940c1304} 
+\index{ezd::Node@{ezd::Node}!x@{x}}
+\index{x@{x}!ezd::Node@{ezd::Node}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float ezd\+::\+Node\+::x\hspace{0.3cm}{\ttfamily [protected]}}
+
+The value of the node. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/node.\+hpp\end{DoxyCompactItemize}
