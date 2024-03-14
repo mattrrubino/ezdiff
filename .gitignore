@@ -1,0 +1,12 @@
+# Editor
+compile_flags.txt
+
+# Build
+**/*.o
+ezd.a
+
+# Test
+test.out
+
+# Docs
+docs
