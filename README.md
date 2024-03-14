@@ -1,6 +1,6 @@
 # EZDiff
 
-A small [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) (AD) library implemented in C++. This library uses C++ operator overloading to automatically construct a static computation graph from mathematical expressions in source code. This graph is evaluated in the forward pass, and the gradient is computed in the backward pass using reverse accumulation AD.
+A small [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) (AD) library implemented in C++. This library uses C++ operator overloading to automatically construct a static computation graph from mathematical expressions in source code. This graph is evaluated in the forward pass, and the gradient is computed in the backward pass using reverse accumulation AD. Detailed API reference is available on [GitHub Pages](https://mattrrubino.github.io/ezdiff/).
 
 ## Installation
 
