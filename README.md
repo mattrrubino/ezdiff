@@ -12,7 +12,7 @@ cd ezdiff
 sudo make install
 ```
 
-To uninstall the library, simply run `make uninstall` from the project directory.
+To uninstall the library, simply run `sudo make uninstall` from the project directory.
 
 ## Usage
 
