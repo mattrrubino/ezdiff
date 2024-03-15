@@ -4,12 +4,12 @@
 
 TEST(TestReg, converge) {
   // Constants
-  ezd::Variable x = ezd::make_var(0, 0);
-  ezd::Variable y = ezd::make_var(0, 0);
+  ezd::Variable x = ezd::make_var(0.0f, 0.0f);
+  ezd::Variable y = ezd::make_var(0.0f, 0.0f);
 
   // Tunables
-  ezd::Variable w = ezd::make_var(1);
-  ezd::Variable b = ezd::make_var(1);
+  ezd::Variable w = ezd::make_var(1.0f);
+  ezd::Variable b = ezd::make_var(1.0f);
 
   // Output
   ezd::Variable y_hat = w * x + b;
@@ -17,8 +17,8 @@ TEST(TestReg, converge) {
 
   // Define line y=2x+3
   int samples = 3;
-  float inputs[] = {3, 7, 1};
-  float outputs[] = {9, 17, 5};
+  float inputs[] = {3.0f, 7.0f, 1.0f};
+  float outputs[] = {9.0f, 17.0f, 5.0f};
 
   const int epochs = 1000;
   for (int i = 0; i < epochs; ++i) {
@@ -33,6 +33,6 @@ TEST(TestReg, converge) {
     }
   }
 
-  ASSERT_NEAR(w->get(), 2, 0.001);
-  ASSERT_NEAR(b->get(), 3, 0.001);
+  ASSERT_NEAR(w->get(), 2.0f, 0.001f);
+  ASSERT_NEAR(b->get(), 3.0f, 0.001f);
 }

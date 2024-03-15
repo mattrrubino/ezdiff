@@ -29,8 +29,8 @@ You could compute the derivative of this function with respect to $x$ where $x =
 #include <ezd/ezd.h>
 
 int main() {
-    Variable x = ezd::make_var(3, 0);
-    Variable f = x * x + 2 * x + 1;
+    Variable x = ezd::make_var(3.0f, 0.0f);
+    Variable f = x * x + 2.0f * x + 1.0f;
 
     f->forward();
     f->zero_grad();
