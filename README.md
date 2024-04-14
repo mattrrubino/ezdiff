@@ -4,15 +4,17 @@ A small [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_diff
 
 ## Installation
 
-This library works on Unix-based operating systems. To install it, execute the following commands:
+To build, test, and install this library, execute the following commands:
 
 ```bash
 git clone git@github.com:mattrrubino/ezdiff.git
 cd ezdiff
-sudo make install
+mkdir build && cd build
+cmake ..
+cmake --build .
+ctest
+sudo cmake --install .
 ```
-
-To uninstall the library, simply run `sudo make uninstall` from the project directory.
 
 ## Usage
 

@@ -2,8 +2,7 @@
 compile_flags.txt
 
 # Build
-**/*.o
-ezd.a
+build
 
 # Test
 test.out
